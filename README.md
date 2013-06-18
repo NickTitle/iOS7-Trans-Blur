@@ -1,6 +1,8 @@
 iOS7-Trans-Blur
 ===============
 
+###Tap the image/ pull the slider to move the translucent layer #
+
 Implementation of the new iOS7-style masking transparency blur, using StackBlur
 
 First off, big thanks to tomsoft1 for the iOS implementation of [StackBlur](https://github.com/tomsoft1/StackBluriOS).
