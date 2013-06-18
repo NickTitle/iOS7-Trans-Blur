@@ -13,4 +13,4 @@ Ironically this was made months and months ago for a project which never took of
 Enjoy, and feel free to email and fix anything I'm screwing up!
 
 **NOTE
-The code is not well commented yet, and is on the heavier/lower side of things, so hang out and you'll see this get better-explained over the next few days
+Comments added :)
