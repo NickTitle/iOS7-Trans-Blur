@@ -16,9 +16,8 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* NickTitleStackBlurVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* NickTitleStackBlurVC.m */; };
 		8E1E10EB1770B89200AA29C1 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1E10EA1770B89200AA29C1 /* mask.png */; };
-		8E2EAB251770AE730027F8FD /* miniMask.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E2EAB241770AE730027F8FD /* miniMask.png */; };
-		8E2EAB271770B48F0027F8FD /* angrycat.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E2EAB261770B48F0027F8FD /* angrycat.png */; };
 		8E35E8D216E95A53001C95DC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E35E8D116E95A53001C95DC /* QuartzCore.framework */; };
+		8E7EBBE31770F7B700833F08 /* angrycat.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E7EBBE21770F7B700833F08 /* angrycat.png */; };
 		E9A020E114E1220000B451FC /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A020E014E1220000B451FC /* UIImage+StackBlur.m */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +36,8 @@
 		32CA4F630368D1EE00C91783 /* iOS7StyleMaskTransparency_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOS7StyleMaskTransparency_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iOS7StyleMaskTransparency-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iOS7StyleMaskTransparency-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		8E1E10EA1770B89200AA29C1 /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mask.png; path = Resources/mask.png; sourceTree = "<group>"; };
-		8E2EAB241770AE730027F8FD /* miniMask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = miniMask.png; sourceTree = "<group>"; };
-		8E2EAB261770B48F0027F8FD /* angrycat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angrycat.png; sourceTree = "<group>"; };
 		8E35E8D116E95A53001C95DC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		8E7EBBE21770F7B700833F08 /* angrycat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = angrycat.png; path = Resources/angrycat.png; sourceTree = "<group>"; };
 		E9A020DF14E1220000B451FC /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
 		E9A020E014E1220000B451FC /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,8 +102,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8E2EAB261770B48F0027F8FD /* angrycat.png */,
-				8E2EAB241770AE730027F8FD /* miniMask.png */,
+				8E7EBBE21770F7B700833F08 /* angrycat.png */,
 				8E1E10EA1770B89200AA29C1 /* mask.png */,
 				2899E5210DE3E06400AC0155 /* NickTitleStackBlurVC.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
@@ -176,9 +173,8 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* NickTitleStackBlurVC.xib in Resources */,
-				8E2EAB251770AE730027F8FD /* miniMask.png in Resources */,
-				8E2EAB271770B48F0027F8FD /* angrycat.png in Resources */,
 				8E1E10EB1770B89200AA29C1 /* mask.png in Resources */,
+				8E7EBBE31770F7B700833F08 /* angrycat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

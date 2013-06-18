@@ -89,7 +89,7 @@ enum {
 - (IBAction) sliderChanged:(UISlider *)sender
 {
     double sVal = sender.value;
-    [maskView setCenter:CGPointMake(sender.value/20 * 180 + 180, maskView.center.y)];
+    [maskView setCenter:CGPointMake(sender.value/20 * 100 + 100, maskView.center.y)];
     [normalView setCenter:CGPointMake(180+sVal, normalView.center.y)];
     [overlayView setCenter:CGPointMake(180+sVal, overlayView.center.y)];
     [overlayView setImage:[self maskImage:blurView.image withMask:[self captureView:maskHolder]]];
