@@ -1,0 +1,28 @@
+This is a StackBlur implementation for iOS based on the algorithm of:
+
+http://incubator.quasimondo.com/processing/fast_blur_deluxe.php
+
+by Mario Klingemann
+
+To use it, just import the UIImage+StackBlur.h and .m in your project.
+
+Then, to blur an image:
+
+UIImage *newIma=[oldIma stackBlur:radius];
+
+You can also apply the method to a buffer directly if you dont'have access to the full UIImage (see applyStackBlurToBuffer)
+
+The algorithm expect an RGBA format (32 bits/pixel).
+If it's not the case, the image will be transformed in a 32 bits/pixel format at each call. You can also use the [UIImage normalize] function of the library to do it once
+
+UIImage *myIma=[[UIImage imageNamed:@"blackWhite.png"] normalized];
+
+...
+UIImage *blurIma=[myIm stackBlur:radius];
+
+Radius must be higher than 1 ...
+
+thomas.landspurg@gmail.com
+
+
+License: New BSD license.
