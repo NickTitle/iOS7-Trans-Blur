@@ -1,11 +1,3 @@
-//
-//  stackBlurViewController.m
-//  stackBlur
-//
-//  Created by Thomas on 07/02/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
-//
-
 #import "NickTitleStackBlurVC.h"
 #import "UIImage+StackBlur.h"
 #import <QuartzCore/QuartzCore.h>
@@ -29,10 +21,17 @@ enum {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	source=[UIImage imageNamed:@"testIma.png"];
+	source=[UIImage imageNamed:@"angrycat.png"];
     currVal = 0;
     isBlurred = 1;
-    
+
+    //*******************************************************
+
+//  COMMENT OUT ANY OF THE FOLLOWING VIEWS TO GET A LOOK AT WHAT EACH ONE DOES
+
+    //*******************************************************
+
+    //This view holds the mask itself - set the image to be whatever shape mask you want
     maskHolder = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
     [maskHolder setBackgroundColor:[UIColor whiteColor]];
     maskView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
@@ -40,29 +39,32 @@ enum {
     [maskView setImage:[UIImage imageNamed:@"mask.png"]];
     [maskView setCenter:CGPointMake(320, maskView.center.y)];
     [maskHolder addSubview:maskView];
-    
+
+    //This view holds the non-blurred portion of the original image
     normalView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-100)];
-    [normalView setImage:[UIImage imageNamed:@"testIma.png"]];
+    [normalView setImage:source];
     [normalView setContentMode:UIViewContentModeScaleAspectFill];
     [self.view addSubview:normalView];
-    
+
+    //This view creates the blurred view from the underlying source
     blurView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-100)];
-    [overlayView setImage:[UIImage imageNamed:@"testIma.png"]];
+    [overlayView setImage:source];
     [overlayView setContentMode:UIViewContentModeScaleAspectFill];
     blurImage = [UIImage new];
     blurImage = [source stackBlur:15];
     [blurView setImage:blurImage];
     
+    //This view contains the masked/blurred portion of the image
     overlayView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-100)];
-    [overlayView setImage:[UIImage imageNamed:@"testIma.png"]];
+    [overlayView setImage:source];
     [overlayView setContentMode:UIViewContentModeScaleAspectFill];
     [self.view addSubview:overlayView];
 
+    //This lets you tap the screen for automatic animation
     UITapGestureRecognizer *simpleTap = [UITapGestureRecognizer new];
     [simpleTap addTarget:self action:@selector(runAnimate)];
     [overlayView addGestureRecognizer:simpleTap];
     [overlayView setUserInteractionEnabled:TRUE];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +78,13 @@ enum {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
+
+//*******************************************************
+
+//  Where the image is set for overlay view, it grabs the blurred version of the underlying image at its current location, then applies it masked on top of the normal image
+//  this happens in both "sliderChanged" and "incrementAnimation"
+
+//*******************************************************
 
 - (IBAction) sliderChanged:(UISlider *)sender
 {
@@ -91,6 +100,8 @@ enum {
         [self queueAnimation];
 }
 
+
+    // This method moves you towards a target x-offset and lets the animation increment itself automatically
 - (void)queueAnimation {
     int targetNormalCenter;
     if (!isBlurred) {
@@ -130,7 +141,7 @@ enum {
     [overlayView setImage:newOverlay];
     mask = nil;
     newOverlay = nil;
-    [self performSelector:@selector(queueAnimation) withObject:nil afterDelay:.005];
+    [self performSelector:@selector(queueAnimation) withObject:nil afterDelay:.01];
     return;
 }
 

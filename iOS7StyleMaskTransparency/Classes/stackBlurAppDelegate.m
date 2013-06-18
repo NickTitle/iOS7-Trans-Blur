@@ -1,11 +1,3 @@
-//
-//  stackBlurAppDelegate.m
-//  stackBlur
-//
-//  Created by Thomas on 07/02/12.
-//  Copyright 2012 __MyCompanyName__. All rights reserved.
-//
-
 #import "stackBlurAppDelegate.h"
 #import "NickTitleStackBlurVC.h"
 

@@ -5,7 +5,7 @@
 //  Created by Thomas LANDSPURG on 07/02/12.
 //  Copyright 2012 Digiwie. All rights reserved.
 //
-// StackBlur implementation on iOS
+// iOS7StyleMaskTransparency implementation on iOS
 //
 //
 

@@ -42,7 +42,7 @@ inline static void zeroClearInt(int* p, size_t count) { memset(p, 0, sizeof(int)
 @implementation  UIImage (StackBlur)
 
 
-// Stackblur algorithm
+// iOS7StyleMaskTransparency algorithm
 // from
 // http://incubator.quasimondo.com/processing/fast_blur_deluxe.php
 // by  Mario Klingemann
