@@ -15,6 +15,4 @@ I used this as my base, with manual animation and masking, to produce high quali
 Ironically this was made months and months ago for a project which never took off, but I'm sure people are looking for something similar right about now!
 
 Enjoy, and feel free to email and fix anything I'm screwing up!
-
-**NOTE
-Comments added :)
+*This software is provided without any warantee or guarantees of any sort. If you use this library in your works, I only ask that you provide a link to this github repo so others can find it too!*
